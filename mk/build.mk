@@ -32,6 +32,6 @@ $(PREFIX)/bin/$(PKG_NAME)$(call extension,$(GOOS)): $(shell find . -type f -name
 	$(GO) build \
 	-o $@ \
 	$(VERBOSE_GO) -tags "$(BUILDTAGS)" \
-	-ldflags "$(GO_LDFLAGS)" $(GO_GCFLAGS) ./cmd/docker-machine
+	-ldflags "$(GO_LDFLAGS)" $(GO_GCFLAGS) ./libmachine
 
 build: $(PREFIX)/bin/$(PKG_NAME)$(call extension,$(GOOS))
